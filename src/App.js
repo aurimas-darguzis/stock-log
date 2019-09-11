@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
+import Routes from './global/routes/Routes';
 
 function App() {
-  return <div className='App'>laba diena</div>;
+  return <Routes />;
 }
 
 export default App;
