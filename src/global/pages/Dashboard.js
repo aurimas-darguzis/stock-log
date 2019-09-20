@@ -1,11 +1,11 @@
 import React from 'react';
-import { Notification } from '../../global/components/Notification';
+import StockLog from '../../features/stock-log/components/StockLog';
 
 export default function Dashboard() {
   return (
     <>
       <div>Dashboard</div>
-      {/* <Notification /> */}
+      <StockLog />
     </>
   );
 }
