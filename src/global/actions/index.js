@@ -1,12 +1,16 @@
-import { NETWORK_COMPLETED, NETWORK_FAILED, NETWORK_BUSY } from '../constants';
+import {
+  FETCH_PRODUCT_LOG_COMPLETED,
+  FETCH_PRODUCT_LOG_FAILED,
+  NETWORK_BUSY,
+} from '../constants';
 
-export const networkCompleted = message => ({
-  type: NETWORK_COMPLETED,
+export const fetchProductLogCompleted = message => ({
+  type: FETCH_PRODUCT_LOG_COMPLETED,
   message,
 });
 
-export const networkFailed = message => ({
-  type: NETWORK_FAILED,
+export const fetchProductLogFailed = message => ({
+  type: FETCH_PRODUCT_LOG_FAILED,
   message,
 });
 

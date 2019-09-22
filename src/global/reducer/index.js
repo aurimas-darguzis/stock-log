@@ -1,13 +1,17 @@
-import { NETWORK_FAILED, NETWORK_COMPLETED, NETWORK_BUSY } from '../constants';
+import {
+  FETCH_PRODUCT_LOG_FAILED,
+  FETCH_PRODUCT_LOG_COMPLETED,
+  NETWORK_BUSY,
+} from '../constants';
 
 export const AppReducer = (state, action) => {
   switch (action.type) {
-    case NETWORK_COMPLETED:
+    case FETCH_PRODUCT_LOG_COMPLETED:
       return {
         ...state,
         successMessage: action.message,
       };
-    case NETWORK_FAILED:
+    case FETCH_PRODUCT_LOG_FAILED:
       return {
         ...state,
         errorMessage: action.message,
