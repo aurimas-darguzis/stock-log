@@ -1,30 +1,68 @@
 {
   "name": "stock-log",
   "version": "0.1.0",
+  "author": {
+    "name": "AD Programming",
+    "email": "aurimas@adprogramming.com",
+    "url": "https://reacting.io"
+  },
+  "build": {
+    "appId": "com.reacting.stock-log",
+    "productName": "StockLog",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
   "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
   "dependencies": {
-    "@material-ui/core": "^4.4.2",
-    "@material-ui/icons": "^4.4.1",
-    "clsx": "^1.0.4",
-    "history": "^4.10.0",
-    "material-table": "^1.50.0",
+    "electron-is-dev": "^1.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
-    "react-spinners": "^0.6.1"
+    "react-router-dom": "^4.3.1",
+    "react-spinners": "^0.6.1",
+    "clsx": "^1.0.4",
+    "history": "^4.10.0"
   },
   "devDependencies": {
-    "react-scripts": "3.1.1"
+    "@material-ui/core": "^4.4.3",
+    "@material-ui/icons": "^4.4.1",
+    "material-table": "^1.50.0",
+    "@rescripts/cli": "^0.0.12",
+    "@rescripts/rescript-env": "^0.0.10",
+    "concurrently": "^4.1.2",
+    "cross-env": "^6.0.0",
+    "electron": "^6.0.10",
+    "electron-builder": "^21.2.0",
+    "react-scripts": "3.1.1",
+    "typescript": "^3.6.3",
+    "wait-on": "^3.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "electron-builder -mw"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "rescripts": [
+    "env"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
