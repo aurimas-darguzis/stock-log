@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
-import history from './global/routes/history';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <Router history={history}>
-    <App />
-  </Router>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// Electron is not working with BrowserRouter:
+// https://stackoverflow.com/questions/36505404/how-to-use-react-router-with-electron/50404777#50404777
+
+// need to use HashRouter isConstructSignatureDeclaration
+//   <Router history={history}>
+//     <App />
+//   </Router>

@@ -1,8 +1,13 @@
 import React from 'react';
-import Routes from './global/routes/Routes';
+import Dashboard from './global/pages/Dashboard';
+
+// previously it was: import Routes from './global/routes/Routes';
+// return <Routes />
+
+// need to adjust architecture to use HashRouter
 
 function App() {
-  return <Routes />;
+  return <Dashboard />;
 }
 
 export default App;
