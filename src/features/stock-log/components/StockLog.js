@@ -44,7 +44,7 @@ const tableIcons = {
 
 export default function StockLog() {
   return (
-    <div style={{ maxWidth: '80%' }}>
+    <div>
       <MaterialTable
         icons={tableIcons}
         columns={[
