@@ -1,11 +1,16 @@
 import React from 'react';
 import StockLog from '../../features/stock-log/components/StockLog';
+import Drawer from '../components/Drawer';
+import PagesList from '../components/PagesList';
 
 export default function Dashboard() {
-  console.log('DASHBOARD!!');
   return (
     <>
-      <StockLog />
+      <Drawer
+        title="Stock Log"
+        left={[<PagesList />]}
+        content={[<StockLog />]}
+      />
     </>
   );
 }
