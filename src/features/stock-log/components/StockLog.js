@@ -2,6 +2,9 @@ import { forwardRef } from 'react';
 import React from 'react';
 import MaterialTable from 'material-table';
 
+import { gql } from 'apollo-boost';
+import { graphql } from 'react-apollo';
+
 import AddBox from '@material-ui/icons/AddBox';
 import ArrowUpward from '@material-ui/icons/ArrowUpward';
 import Check from '@material-ui/icons/Check';
@@ -42,7 +45,36 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 
-export default function StockLog() {
+const getBooksQuery = gql`
+  {
+    books {
+      name
+      id
+    }
+  }
+`;
+
+const StockLog = props => {
+  // console.log(props);
+  let { data } = props;
+
+  React.useEffect(() => {
+    // console.log(props);
+    if (data.loading) {
+      // props.fetchRules();
+      console.log('wat? Loading :D');
+    } else {
+      console.log('mount it!');
+      console.log(props);
+    }
+  }, [props, data]);
+
+  const displayBooks = props => {
+    // const { data } = props;
+    // console.log(props);
+    return <div>laba diena</div>;
+  };
+
   return (
     <div>
       <MaterialTable
@@ -69,6 +101,25 @@ export default function StockLog() {
         ]}
         title="Stock log"
       />
+      <div>
+        {
+          // props.data &&
+          // props.data.books &&
+          // props.data.books.map(i => console.log(i))
+          // data.loading ? (
+          //  <div>Loading...</div>
+          // ) : (
+          //  <div>
+          //    {
+          //      data.map(i => (
+          //      <li key={i}>{i.name}</li>
+          //    ))
+          //    }
+          //  </div>)
+        }
+      </div>
     </div>
   );
-}
+};
+
+export default graphql(getBooksQuery)(StockLog);

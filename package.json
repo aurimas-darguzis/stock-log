@@ -25,10 +25,14 @@
   "main": "public/electron.js",
   "homepage": "./",
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.2",
+    "apollo-boost": "^0.4.4",
     "clsx": "^1.0.4",
     "electron-is-dev": "^1.1.0",
+    "graphql": "^14.5.8",
     "history": "^4.10.0",
     "react": "^16.9.0",
+    "react-apollo": "^3.1.2",
     "react-dom": "^16.9.0",
     "react-router-dom": "^4.3.1",
     "react-spinners": "^0.6.1"

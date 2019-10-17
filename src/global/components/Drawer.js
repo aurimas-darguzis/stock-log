@@ -8,7 +8,6 @@ import {
   Drawer,
   IconButton,
   Divider,
-  List,
 } from '@material-ui/core';
 import clsx from 'clsx';
 import MenuIcon from '@material-ui/icons/Menu';
