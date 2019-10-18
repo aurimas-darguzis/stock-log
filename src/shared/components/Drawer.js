@@ -8,7 +8,6 @@ import {
   Drawer,
   IconButton,
   Divider,
-  List,
 } from '@material-ui/core';
 import clsx from 'clsx';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -112,7 +111,7 @@ export default function AppDrawer({ top, left, content }) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Title
+            Stock Log
           </Typography>
           {top &&
             top.map((component, index) => <div key={index}>{component}</div>)}

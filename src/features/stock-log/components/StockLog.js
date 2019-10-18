@@ -67,7 +67,7 @@ export default function StockLog() {
             dispensedBy: 'Jim Carrey',
           },
         ]}
-        title="Stock log"
+        title="Stock"
       />
     </div>
   );
