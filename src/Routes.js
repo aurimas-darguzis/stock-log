@@ -6,14 +6,13 @@ import { Main as MainLayout } from './layouts';
 
 import {
   Dashboard as DashboardView,
-  // ProductList as ProductListView,
-  // UserList as UserListView,
-  // Typography as TypographyView,
-  // Icons as IconsView,
+  // Stock as StockView,
+  // Suppliers as TSuppliersView,
+  // Orders as Orders,
   // Account as AccountView,
+  // HumanResources as HumanResourcesView,
+  // Authentication as AuthenticationView,
   // Settings as SettingsView,
-  // SignUp as SignUpView,
-  // SignIn as SignInView,
   // NotFound as NotFoundView,
 } from './views';
 
