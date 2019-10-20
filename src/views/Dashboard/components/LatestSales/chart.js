@@ -1,16 +1,4 @@
-// import palette from '@theme/palette';
-const palette = {
-  primary: {
-    main: 'blue',
-  },
-  neutral: 'grey',
-  divider: 'grey',
-  white: 'white',
-  text: {
-    primary: 'black',
-    secondary: 'green',
-  },
-};
+import palette from '../../../../theme/palette';
 
 export const data = {
   labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug'],

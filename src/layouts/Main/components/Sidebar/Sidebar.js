@@ -6,11 +6,11 @@ import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import PeopleIcon from '@material-ui/icons/People';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import TextFieldsIcon from '@material-ui/icons/TextFields';
-import ImageIcon from '@material-ui/icons/Image';
+import SettingsPhoneIcon from '@material-ui/icons/SettingsPhone';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
+import LocalShippingIcon from '@material-ui/icons/LocalShipping';
 
 import { Profile, SidebarNav } from './components';
 
@@ -49,34 +49,34 @@ const Sidebar = props => {
       icon: <DashboardIcon />,
     },
     {
-      title: 'Users',
-      href: '/users',
-      icon: <PeopleIcon />,
-    },
-    {
-      title: 'Products',
-      href: '/products',
+      title: 'Stock',
+      href: '/stock',
       icon: <ShoppingBasketIcon />,
     },
     {
-      title: 'Authentication',
-      href: '/sign-in',
-      icon: <LockOpenIcon />,
+      title: 'Suppliers',
+      href: '/suppliers',
+      icon: <LocalShippingIcon />,
     },
     {
-      title: 'Typography',
-      href: '/typography',
-      icon: <TextFieldsIcon />,
-    },
-    {
-      title: 'Icons',
-      href: '/icons',
-      icon: <ImageIcon />,
+      title: 'Orders',
+      href: '/orders',
+      icon: <SettingsPhoneIcon />,
     },
     {
       title: 'Account',
       href: '/account',
       icon: <AccountBoxIcon />,
+    },
+    {
+      title: 'HR',
+      href: '/human-resources',
+      icon: <PeopleIcon />,
+    },
+    {
+      title: 'Authentication',
+      href: '/authentication',
+      icon: <LockOpenIcon />,
     },
     {
       title: 'Settings',

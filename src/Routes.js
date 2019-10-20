@@ -28,28 +28,22 @@ const Routes = () => {
         path="/dashboard"
       />
       <RouteWithLayout
-        component={() => <div>users</div>}
+        component={() => <div>stock</div>}
         exact
         layout={MainLayout}
-        path="/users"
+        path="/stock"
       />
       <RouteWithLayout
-        component={() => <div>list</div>}
+        component={() => <div>suppliers</div>}
         exact
         layout={MainLayout}
-        path="/products"
+        path="/suppliers"
       />
       <RouteWithLayout
-        component={() => <div>timesheets</div>}
+        component={() => <div>orders</div>}
         exact
         layout={MainLayout}
-        path="/typography"
-      />
-      <RouteWithLayout
-        component={() => <div>books</div>}
-        exact
-        layout={MainLayout}
-        path="/icons"
+        path="/orders"
       />
       <RouteWithLayout
         component={() => <div>account</div>}
@@ -58,23 +52,24 @@ const Routes = () => {
         path="/account"
       />
       <RouteWithLayout
+        component={() => <div>human resources</div>}
+        exact
+        layout={MainLayout}
+        path="/human-resources"
+      />
+      <RouteWithLayout
+        component={() => <div>authentication</div>}
+        exact
+        layout={MainLayout}
+        path="/authentication"
+      />
+      <RouteWithLayout
         component={() => <div>settings</div>}
         exact
         layout={MainLayout}
         path="/settings"
       />
-      <RouteWithLayout
-        component={() => <div>sign up</div>}
-        exact
-        layout={MainLayout}
-        path="/sign-up"
-      />
-      <RouteWithLayout
-        component={() => <div>sign in</div>}
-        exact
-        layout={MainLayout}
-        path="/sign-in"
-      />
+
       <RouteWithLayout
         component={() => <div>not found</div>}
         exact
