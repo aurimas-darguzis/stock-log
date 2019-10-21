@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 
 import { RouteWithLayout } from './components';
 import { Main as MainLayout } from './layouts';
@@ -19,12 +19,11 @@ import {
 const Routes = () => {
   return (
     <Switch>
-      <Redirect exact from="/" to="/dashboard" />
       <RouteWithLayout
         component={DashboardView}
         exact
         layout={MainLayout}
-        path="/dashboard"
+        path="/"
       />
       <RouteWithLayout
         component={() => <div>stock</div>}
@@ -75,7 +74,6 @@ const Routes = () => {
         layout={MainLayout}
         path="/not-found"
       />
-      <Redirect to="/not-found" />
     </Switch>
   );
 };
