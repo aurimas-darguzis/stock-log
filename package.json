@@ -25,17 +25,27 @@
   "main": "public/electron.js",
   "homepage": "./",
   "dependencies": {
+    "chart.js": "^2.8.0",
     "clsx": "^1.0.4",
     "electron-is-dev": "^1.1.0",
-    "history": "^4.10.0",
+    "history": "^4.10.1",
+    "material-ui": "^1.0.0-beta.47",
+    "moment": "^2.24.0",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-chartjs-2": "^2.8.0",
     "react-dom": "^16.9.0",
+    "react-perfect-scrollbar": "^1.5.3",
     "react-router-dom": "^4.3.1",
-    "react-spinners": "^0.6.1"
+    "react-spinners": "^0.6.1",
+    "recompose": "^0.30.0",
+    "uuid": "^3.3.3",
+    "validate.js": "^0.13.1"
   },
   "devDependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
+    "@material-ui/styles": "^4.2.1",
     "@rescripts/cli": "^0.0.12",
     "@rescripts/rescript-env": "^0.0.10",
     "concurrently": "^4.1.2",
@@ -43,7 +53,7 @@
     "electron": "^6.0.10",
     "electron-builder": "^21.2.0",
     "material-table": "^1.50.0",
-    "react-scripts": "3.1.1",
+    "react-scripts": "^3.2.0",
     "typescript": "^3.6.3",
     "wait-on": "^3.3.0"
   },
