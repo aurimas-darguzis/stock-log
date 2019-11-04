@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { createBrowserHistory, createHashHistory } from 'history';
+import isElectron from 'is-electron';
 // import { Chart } from 'react-chartjs-2';
 import { ThemeProvider } from '@material-ui/styles';
 // import validate from 'validate.js';
@@ -12,7 +13,7 @@ import theme from './theme';
 // import validators from './common/validators';
 import Routes from './Routes';
 
-const browserHistory = createBrowserHistory();
+const browserHistory = createHashHistory();
 
 // Chart.helpers.extend(Chart.elements.Rectangle.prototype, {
 //   draw: chartjs.draw,
