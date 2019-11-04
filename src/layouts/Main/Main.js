@@ -54,7 +54,7 @@ const Main = props => {
       <Sidebar
         onClose={handleSidebarClose}
         open={shouldOpenSidebar}
-        variant={isDesktop ? 'persistent' : 'temporary'}
+        variant={'persistent'}
       />
       <main className={classes.content}>
         {children}
