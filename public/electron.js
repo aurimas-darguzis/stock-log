@@ -1,14 +1,19 @@
-const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow, ipcMain } = require('electron');
+const { channels } = require('../src/shared/constants');
 
-const path = require('path');
 const isDev = require('electron-is-dev');
+const path = require('path');
 
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 900, height: 680 });
+  mainWindow = new BrowserWindow({
+    width: 900,
+    height: 680,
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js'),
+    },
+  });
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3000'
@@ -34,4 +39,11 @@ app.on('activate', () => {
   if (mainWindow === null) {
     createWindow();
   }
+});
+
+ipcMain.on(channels.APP_INFO, event => {
+  event.sender.send(channels.APP_INFO, {
+    appName: app.getName(),
+    appVersion: app.getVersion(),
+  });
 });
