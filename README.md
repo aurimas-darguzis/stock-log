@@ -2,6 +2,11 @@ Stock Logger
 
 Development environment
 
+- Node v10.16.0
+- yarn v1.5.1
+
+Setup
+
 ```bash
 git clone
 yarn
